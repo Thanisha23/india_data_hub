@@ -1,7 +1,7 @@
 "use client";
 
-import { LogIn, Search, User, Menu, X } from "lucide-react";
-import { useSession, signOut } from "next-auth/react";
+import { LogIn, Menu, Search, X } from "lucide-react";
+import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -73,9 +73,13 @@ const Navbar = ({ onSearch, searchQuery = "" }: NavbarProps) => {
         </div>
 
         <div className="hidden md:flex justify-center items-center gap-4 lg:gap-7 text-white">
-          <select className="bg-transparent text-sm lg:text-base">
-            <option value="database">Database</option>
-            <option value="data">Data</option>
+          <select className="bg-transparent text-sm lg:text-base cursor-pointer">
+            <option className="text-black" value="database">
+              Database
+            </option>
+            <option className="text-black" value="data">
+              Data
+            </option>
           </select>
           <button className="text-sm lg:text-base">Calendar</button>
           <button className="text-sm lg:text-base">Help</button>
@@ -84,7 +88,7 @@ const Navbar = ({ onSearch, searchQuery = "" }: NavbarProps) => {
             <div className="relative user-dropdown">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex justify-center items-center gap-2"
+                className="flex justify-center items-center gap-2 cursor-pointer"
               >
                 <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-full font-semibold bg-white flex items-center justify-center text-primary text-sm lg:text-base">
                   {session.user?.name?.slice(0, 1)}
