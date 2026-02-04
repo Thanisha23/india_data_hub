@@ -24,7 +24,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden flex flex-col lg:flex-row items-center justify-between bg-linear-to-br from-slate-50 to-blue-50 font-inter">
       
-      <div className="w-full lg:w-[50%] relative min-h-[40vh] lg:h-screen flex flex-col justify-center items-center px-6 sm:px-12 lg:px-16 py-12 lg:py-0 bg-primary">
+     <div className="hidden lg:flex w-full lg:w-[50%] relative h-screen flex-col justify-center items-center px-12 lg:px-16 bg-primary">
         <div
           className="absolute inset-0 z-0 opacity-20"
           style={{
@@ -92,8 +92,9 @@ export default function LoginPage() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-blue-950/50 to-transparent"></div>
       </div>
 
-      <div className="w-full lg:w-[50%] flex justify-center items-center px-6 sm:px-12 lg:px-16 py-12">
+      <div className="w-full lg:w-[50%] flex justify-center items-center px-6 sm:px-12 lg:px-16 py-12 min-h-screen">
         <div className="w-full max-w-md">
+         
           <form
             onSubmit={handleSubmit}
             className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-10"

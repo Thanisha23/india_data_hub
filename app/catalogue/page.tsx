@@ -569,12 +569,6 @@ export default function CataloguePage() {
               `}
               onClick={(e) => e.stopPropagation()}
             >
-              <button
-                onClick={() => setSidebarOpen(false)}
-                className="absolute top-4 right-4 p-2 rounded-md hover:bg-gray-100"
-              >
-                <X size={20} />
-              </button>
 
               <div className="p-4">
                 <div className="bg-blue-100 rounded-xl px-4 py-3 mb-2">
